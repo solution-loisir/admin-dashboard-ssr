@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html :lang="lang || 'en'">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script webc:type="js" webc:is="title" webc:raw>
+      `<title>${meta.title}${title ? ` | ${title}` : ""}</title>`;
+    </script>
+    <meta name="description" :content="description || meta.description">
+    <script webc:type="js" webc:is="link" webc:raw>
+      const path = require("path");
+      `<link rel="icon" type="image/x-icon" href="${path.join(meta.favicon.dest, 'favicon.ico')}" sizes="32x32">
+      <link rel="icon" type="image/png" href="${path.join(meta.favicon.dest, 'favicon-32x32.png')}" sizes="32x32">
+      <link rel="icon" type="image/png" href="${path.join(meta.favicon.dest, 'android-chrome-192x192.png')}" sizes="192x192">
+      <link rel="apple-touch-icon" href="${path.join(meta.favicon.dest, 'apple-touch-icon-180x180.png')}">`;
+    </script>
+    <script defer :src="getBundleFileUrl('js')" webc:keep></script>
+    <script defer src="/assets/js/index.js" webc:keep></script>
+    <link rel="stylesheet" type="text/css" href="/assets/style/index.css" webc:raw>
+    <style @raw="getBundle('css')" webc:keep></style>
+    <link rel="alternate" type="application/atom+xml" :title="meta.title" :href="meta.canonical('feed.xml')">
+    <link rel="canonical" :href="meta.canonical(page.url)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" :content="meta.author.twitter">
+    <meta name="twitter:creator" :content="meta.author.twitter">
+    <meta property="og:type" :content="og_type || meta.og.type">
+    <meta property="og:title" :content="meta.title + (title ? ' | ' + title : '')">
+    <meta property="og:url" :content="meta.canonical(page.url)">
+    <meta property="og:image" :content="og_image || meta.og.image.src">
+    <meta property="og:image:secure_url" :content="og_image || meta.og.image.src">
+    <meta property="og:image:alt" :content="og_image_alt || meta.og.image.alt">
+    <meta property="og:image:width" :content="og_image_width || meta.og.image.width">
+    <meta property="og:image:height" :content="og_image_height || meta.og.image.height">
+    <meta property="og:description" :content="description || meta.description">
+    <meta property="og:locale" :content="lang || 'en'">
+    <meta property="og:site_name" :content="meta.title">
+    <meta property="article:author" :content="og_author" webc:if="og_author">
+  </head>
+  <body>
+    <page-header header-class="page-header"></page-header>
+    <slot @raw="content" webc:nokeep></slot>
+    <page-footer></page-footer>
+  </body>
+</html>

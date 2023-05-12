@@ -1,0 +1,41 @@
+<ul role="list" class="[ post-list ] [ flex gap-400 ]">
+  <script webc:type="js">
+    // Inspired from https://11ty.webc.fun/recipes/looping-render-function/
+  
+    if(reverse) source.reverse();
+
+    const _source = limit ? source.slice(0, limit) : source;
+
+    function displayTags(tags, tagsLimit) {
+      if(!tags.length) return "";
+      return `
+        <nav class="post-list__tags">
+          <ul role="list" class="flex line-height-sm">
+            ${tags.map((tag, index) => {
+              if(index < tagsLimit) {
+                return `<li><a href="/tags/${slugify(tag)}/" class="small">#${slugify(tag)}</a></li>`;
+              }
+            }).join("\n")}  
+          </ul>
+        </nav>`;
+    };
+  
+    _source.map((post) => {
+      let tags = Array.isArray(post.data.tags) ? post.data.tags : [post.data.tags];
+  
+      return `<li>
+        <div class="flow">
+          <div class="line-height-sm">
+            <p class="big bold">${post.data.title}</p>
+            <p class="small"><date-time date="${post.date}"></date-time></p>
+          </div>
+          <div>
+            <p>${truncate(post.data.description)}</p>
+            ${displayTags(tags, tagsLimit || $data.meta.tagsLimit)}
+          </div>
+        </div>
+        <a href="${post.url}" class="button align-self-center">Read post</a>
+      </li>`
+    }).join("\n");
+  </script>
+</ul>

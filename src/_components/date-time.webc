@@ -1,0 +1,1 @@
+<time :datetime="readableDate(date)" @html="readableDate(date)"></time>

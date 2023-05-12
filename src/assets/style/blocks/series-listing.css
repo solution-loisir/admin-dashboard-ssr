@@ -1,0 +1,12 @@
+.series-listing > p {
+  font-size: var(--size-700);
+  background: var(--webkit-gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.series-listing a[aria-current="page"] {
+  background-color: #fbcbcf;
+  border-radius: var(--radius);
+}

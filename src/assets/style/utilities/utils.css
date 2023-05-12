@@ -1,0 +1,63 @@
+.gap-100 {
+  gap: var(--size-100);
+}
+
+.gap-200 {
+  gap: var(--size-200);
+}
+
+.gap-300 {
+  gap: var(--size-300);
+}
+
+.gap-400 {
+  gap: var(--size-400);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.line-height-xs {
+  line-height: 0.5;
+}
+
+.line-height-sm {
+  line-height: 1;
+}
+
+.line-height-md {
+  line-height: 1.2;
+}
+
+.big {
+  font-size: var(--size-600);
+}
+
+.small {
+  font-size: var(--size-300); 
+}
+
+.margin-block-0 {
+  margin-block: 0;
+}
+
+.margin-block-600 {
+  margin-block: var(--size-600);
+}
+
+.margin-block-1200 {
+  margin-block: var(--size-1200);
+}
+
+.margin-inline-auto {
+  margin-inline: auto;
+}
+
+.padding-block-200 {
+  padding-block: var(--size-200);
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,5 @@
+<details class="contents" :open="open || null" webc:if="$data.toc">
+  <summary class="bold">Contents</summary>
+  
+  [toc]
+</details>

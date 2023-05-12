@@ -1,0 +1,11 @@
+<nav>
+  <ul role="list" class="flex justify-space-around gap-200">
+    <li webc:for="(key, value) in $data.meta.author.contact">
+      <a :href="value['link']" class="flex flex-column gap-100 align-center reset-anchor" rel="me">
+        <slot @html="value['icon']" webc:nokeep></slot>
+        <p @text="value['label']" class="small"></p>
+      </a>
+    </li>
+    <slot></slot>
+  </ul>
+</nav>

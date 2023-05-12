@@ -1,0 +1,14 @@
+---
+title: "Blog"
+description: "The blog of Webc Starter Kit"
+lang: "en"
+navigation:
+  order: 3
+  label: "Blog"
+pagination:
+  data: collections.posts
+  size: 8
+  alias: posts
+---
+<posts-list :source="posts"></posts-list>
+<pagination-navigation webc:if="pagination.pages.length > 1"></pagination-navigation>
