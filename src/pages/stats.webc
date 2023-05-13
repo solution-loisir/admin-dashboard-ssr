@@ -1,0 +1,9 @@
+---
+title: "Statistiques"
+description: "Interface des statistiques."
+permalink:
+  dynamic: /statistiques/
+navigation:
+  order: 2
+  label: Statistiques
+---

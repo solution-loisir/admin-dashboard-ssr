@@ -1,0 +1,9 @@
+---
+title: "Clients"
+description: "Interface des donnée des clients."
+permalink:
+  dynamic: /clients/
+navigation:
+  order: 3
+  label: Clients
+---

@@ -6,7 +6,7 @@ permalink: manifest.json
 <script webc:type="js">
   `{
   "short_name": "${meta.title}",
-    "name": "${meta.title + '. ' + meta.subtitle}",
+    "name": "${meta.title}",
     "description": "${meta.description}",
     "icons": [
       {

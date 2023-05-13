@@ -4,18 +4,13 @@ const { EleventyRenderPlugin, EleventyServerlessBundlerPlugin } = require("@11ty
 
 module.exports = function(config) {
   config.addPlugin(EleventyRenderPlugin);
-  /*
   config.addPlugin(EleventyServerlessBundlerPlugin, {
     name: "dynamic",
     functionsDir: "./netlify/functions/",
   });
-  */
-  config.addPlugin(require("@11ty/eleventy-plugin-rss"));
-  config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
   config.addPlugin(require("@11ty/eleventy-plugin-webc"), {
     components: [
       "src/_components/**/*.webc",
-      "./node_modules/@11ty/eleventy-plugin-syntaxhighlight/syntax-highlight.webc",
       "npm:@11ty/eleventy-img/*.webc"
     ]
   });
