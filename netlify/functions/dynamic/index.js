@@ -9,6 +9,7 @@ async function handler(event) {
     path: new URL(event.rawUrl).pathname,
     query: event.multiValueQueryStringParameters || event.queryStringParameters,
     functionsDir: "./netlify/functions/",
+    singleTemplateScope: false
   });
 
   try {
