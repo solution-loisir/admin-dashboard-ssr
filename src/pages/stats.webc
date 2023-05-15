@@ -1,6 +1,7 @@
 ---
 title: "Statistiques"
 description: "Interface des statistiques."
+dynamicPermalink: false
 permalink:
   dynamic: /statistiques/
 navigation:

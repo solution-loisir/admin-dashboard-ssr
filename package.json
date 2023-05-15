@@ -5,7 +5,7 @@
   "main": "eleventy.config.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "dev": "npx netlify dev",
+    "dev": "BROWSER=none npx netlify dev",
     "clean": "rm -rf _site",
     "generate-favicons": "node process/generate-favicons.js",
     "new-post": "node process/new-post.js",
