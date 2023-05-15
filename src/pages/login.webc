@@ -4,5 +4,5 @@ dynamicPermalink: false
 permalink: "/"
 navigation:
   order: 1
-  label: Login
+  label: Accueil
 ---
