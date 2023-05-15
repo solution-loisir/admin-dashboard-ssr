@@ -1,4 +1,5 @@
 ---
+layout: page.webc
 title: "Clients"
 description: "Interface des donnée des clients."
 dynamicPermalink: false

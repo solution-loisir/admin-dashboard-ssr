@@ -1,4 +1,5 @@
 ---
+layout: page.webc
 description: "Interface de login."
 dynamicPermalink: false
 permalink: "/"

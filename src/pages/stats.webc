@@ -1,4 +1,5 @@
 ---
+layout: page.webc
 title: "Statistiques"
 description: "Interface des statistiques."
 dynamicPermalink: false
