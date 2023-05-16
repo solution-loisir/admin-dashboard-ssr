@@ -16,6 +16,7 @@
     </script>
     <script defer :src="getBundleFileUrl('js')" webc:keep></script>
     <script defer src="/assets/js/index.js" webc:keep></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" webc:keep></script>
     <link rel="stylesheet" type="text/css" href="/assets/style/index.css" webc:raw>
     <style @raw="getBundle('css')" webc:keep></style>
   </head>

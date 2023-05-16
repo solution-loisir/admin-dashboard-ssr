@@ -4,3 +4,4 @@ description: "Interface de login."
 dynamicPermalink: false
 permalink: "/"
 ---
+<div data-netlify-identity-button>Login with Netlify Identity</div>
