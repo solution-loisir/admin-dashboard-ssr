@@ -5,7 +5,4 @@ description: "Interface des donnée des clients."
 dynamicPermalink: false
 permalink:
   dynamic: /clients/
-navigation:
-  order: 3
-  label: Clients
 --- 

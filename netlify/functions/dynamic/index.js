@@ -8,8 +8,7 @@ async function handler(event) {
   let elev = new EleventyServerless("dynamic", {
     path: new URL(event.rawUrl).pathname,
     query: event.multiValueQueryStringParameters || event.queryStringParameters,
-    functionsDir: "./netlify/functions/",
-    singleTemplateScope: false
+    functionsDir: "./netlify/functions/"
   });
 
   try {

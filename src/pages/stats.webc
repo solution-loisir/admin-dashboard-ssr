@@ -5,7 +5,4 @@ description: "Interface des statistiques."
 dynamicPermalink: false
 permalink:
   dynamic: /statistiques/
-navigation:
-  order: 2
-  label: Statistiques
 ---

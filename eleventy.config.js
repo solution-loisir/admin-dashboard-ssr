@@ -23,7 +23,7 @@ module.exports = function(config) {
 		}
   });
   config.addPlugin(require("./config/markdown"));
-  config.addPlugin(require("./config/collections"));
+  //config.addPlugin(require("./config/collections"));
   config.addPlugin(require("./config/filters"));
   config.addPlugin(require("./config/transforms"));
   config.addPlugin(require("./config/cssFormat"));
