@@ -6,7 +6,8 @@ module.exports = function(config) {
   config.addPlugin(EleventyRenderPlugin);
   config.addPlugin(EleventyServerlessBundlerPlugin, {
     name: "dynamic",
-    functionsDir: "./netlify/functions/"
+    functionsDir: "./netlify/functions/",
+    redirects: false
   });
   config.addPlugin(require("@11ty/eleventy-plugin-webc"), {
     components: [

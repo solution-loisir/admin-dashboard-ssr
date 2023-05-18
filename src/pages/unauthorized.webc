@@ -1,0 +1,11 @@
+---
+layout: base.webc
+title: "401 Unauthorized"
+description: "401 Unauthorized response status code."
+dynamicPermalink: false
+permalink: /unauthorized/
+---
+<main class="wrapper padding-block-xxl flow flow-lg">
+  <h1>Contenu non autorisé</h1>
+  <p>La requête n'a pas été effectuée, car il manque des informations d'authentification valides pour la ressource visée.</p>
+</main>
