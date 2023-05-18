@@ -9,7 +9,7 @@ command = "npm start"
 for = "/*"
 
   [headers.values]
-  Content-Security-Policy = "default-src 'self'; frame-ancestors 'self'; form-action 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://identity.netlify.com/"
+  Content-Security-Policy = "frame-ancestors 'self'; form-action 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://identity.netlify.com/"
   Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
   X-Frame-Options = "SAMEORIGIN"
   X-XSS-Protection = "1; mode=block"
@@ -18,15 +18,24 @@ for = "/*"
   Permissions-Policy = "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
 
 [[redirects]]
-from = "/statistiques/"
+from = "/admin/statistiques/"
 to = "/.netlify/functions/dynamic"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "dynamic"
 
 [[redirects]]
-from = "/clients/"
+from = "/admin/clients/"
 to = "/.netlify/functions/dynamic"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "dynamic"
+
+[[redirects]]
+from = "/admin/*"
+to = "/"
+force = true
+status = 200
+
+  [redirects.conditions]
+  Role = [ "admin" ]

@@ -4,5 +4,5 @@ title: "Clients"
 description: "Interface des donnée des clients."
 dynamicPermalink: false
 permalink:
-  dynamic: /clients/
+  dynamic: /admin/clients/
 --- 

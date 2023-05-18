@@ -4,4 +4,3 @@ description: "Interface de login."
 dynamicPermalink: false
 permalink: "/"
 ---
-<div data-netlify-identity-menu></div>

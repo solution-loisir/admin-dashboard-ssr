@@ -4,11 +4,11 @@ module.exports = [
     label: "Accueil"
   },
   {
-    url: "/statistiques/",
+    url: "/admin/statistiques/",
     label: "Statistiques"
   },
   {
-    url: "/clients/",
+    url: "/admin/clients/",
     label: "Clients"
   }
 ];

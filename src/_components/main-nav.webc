@@ -1,5 +1,10 @@
 <nav class="main-nav">
-  <ul role="list" class="flex gap-400">
-    <li webc:for="item of source"><a :href="item.url" :aria-current="(item.url === $data.page.url) ? 'page' : null" @text="item.label" class="reset-anchor"></a></li>
+  <ul role="list" class="flex align-center justify-center gap-400">
+    <li webc:for="item of source">
+      <a :href="item.url" :aria-current="(item.url === $data.page.url) ? 'page' : null" @text="item.label" class="reset-anchor"></a>
+    </li>
+    <li>
+      <div data-netlify-identity-button></div>
+    </li>
   </ul>
 </nav>
