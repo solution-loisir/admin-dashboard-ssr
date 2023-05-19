@@ -4,7 +4,6 @@ command = "npm run build"
 
 [dev]
 command = "npm start"
-targetPort = 8080
 
 [[headers]]
 for = "/*"
