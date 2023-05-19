@@ -8,7 +8,6 @@
     "dev": "BROWSER=none npx netlify dev",
     "clean": "rm -rf _site",
     "generate-favicons": "node process/generate-favicons.js",
-    "new-post": "node process/new-post.js",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "build": "PRODUCTION=true npx @11ty/eleventy"
   },
