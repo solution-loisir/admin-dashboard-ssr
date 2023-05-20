@@ -8,24 +8,26 @@ command = "npm start"
 [[headers]]
 for = "/*"
 
-  [headers.values]
-  Content-Security-Policy = "frame-ancestors 'self'; form-action 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://identity.netlify.com/"
-  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-  X-Frame-Options = "SAMEORIGIN"
-  X-XSS-Protection = "1; mode=block"
-  X-Content-Type-Options = "nosniff"
-  Referrer-Policy = "no-referrer"
-  Permissions-Policy = "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
-
-[[redirects]]
-from = "/admin/*"
-to = "/unauthorized/"
-status = 401
-force = true
-conditions = {Role = ["admin"]}
+[headers.values]
+Content-Security-Policy = "frame-ancestors 'self'; form-action 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://identity.netlify.com/"
+Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+X-Frame-Options = "SAMEORIGIN"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "no-referrer"
+Permissions-Policy = "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
 
 [[redirects]]
 from = "/admin/*"
 to = "/.netlify/functions/dynamic"
 status = 200
+force = true
+
+  [redirects.conditions]
+  Role = [ "admin" ]
+
+[[redirects]]
+from = "/admin/*"
+to = "/unauthorized/"
+status = 401
 force = true
