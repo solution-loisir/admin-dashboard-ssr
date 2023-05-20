@@ -19,13 +19,13 @@ for = "/*"
 
 [[redirects]]
 from = "/admin/*"
-to = "/.netlify/functions/dynamic"
-status = 200
+to = "/unauthorized/"
+status = 401
 force = true
 conditions = {Role = ["admin"]}
 
 [[redirects]]
 from = "/admin/*"
-to = "/unauthorized/"
-status = 401
+to = "/.netlify/functions/dynamic"
+status = 200
 force = true
