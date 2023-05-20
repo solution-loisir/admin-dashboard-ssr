@@ -1,9 +1,5 @@
 module.exports = [
   {
-    url: "/",
-    label: "Accueil"
-  },
-  {
     url: "/admin/statistiques/",
     label: "Statistiques"
   },
