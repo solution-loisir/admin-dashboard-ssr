@@ -6,3 +6,6 @@ dynamicPermalink: false
 permalink:
   dynamic: /admin/statistiques/
 ---
+<ul>
+  <li webc:for="program of programs" @html="program.Name"></li>
+</ul>
