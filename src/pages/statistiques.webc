@@ -4,3 +4,23 @@ dynamicPermalink: false
 permalink:
   dynamic: "/admin/statistiques/"
 ---
+<table>
+  <caption>Places disponibles</caption>
+  <tbody>
+    <tr>
+      <th>Places offertes</th>
+      <td @text="spotsStats.TotalSpots.toString()"></td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <th>Places restantes</th>
+      <td @text="spotsStats.TotalSpotsRemaining.toString()"></td>
+      <td @text="Math.round(spotsStats.TotalSpotsRemaining / spotsStats.TotalSpots * 100) + '%'"></td>
+    </tr>
+    <tr>
+      <th>Places réservées</th>
+      <td @text="spotsStats.TotalSpotsReserved.toString()"></td>
+      <td @text="Math.round(spotsStats.TotalSpotsReserved / spotsStats.TotalSpots * 100) + '%'"></td>
+    </tr>
+  </tbody>
+</table>
