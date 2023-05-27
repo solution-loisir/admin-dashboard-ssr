@@ -1,5 +1,15 @@
 <nav class="main-nav">
   <ul role="list" class="flex align-center justify-center gap-400">
+    <li>
+      <details>
+        <summary>Statistiques</summary>
+        <ul role="list">
+          <li webc:for="program of $data.programs">
+            <a :href="`/admin/statistiques/?id=${program.Id}`" @html="program.Name"></a>
+          </li>
+        </ul>
+      </details>
+    </li>
     <li webc:for="item of source">
       <a :href="item.url" :aria-current="(item.url === $data.page.url) ? 'page' : null" @text="item.label" class="reset-anchor"></a>
     </li>
