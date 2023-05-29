@@ -3,13 +3,9 @@
 @import "blocks/page-header.css";
 @import "blocks/image.css";
 @import "blocks/auto-toc.css";
-@import "blocks/prism-okaidia.css";
-@import "blocks/post-list.css";
 @import "blocks/main-nav.css";
-@import "blocks/series-listing.css";
 @import "blocks/page-footer.css";
 @import "blocks/card.css";
-@import "blocks/home-author-section.css";
 @import "blocks/top-button.css";
 @import "blocks/buttons.css";
 @import "utilities/wrapper.css";
