@@ -4,7 +4,7 @@ dynamicPermalink: false
 permalink:
   dynamic: "/admin/statistiques/"
 ---
-<table>
+<table class="margin-inline-auto">
   <caption>Places disponibles</caption>
   <tbody>
     <tr>

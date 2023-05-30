@@ -129,3 +129,34 @@ article blockquote {
     border-end-end-radius: 0;
   }
 }
+
+table {
+  table-layout: fixed;
+  width: min(44ch, 85vw);
+  border-collapse: collapse;
+  border: 5px solid var(--color-primary);
+  background-color: var(--color-gray);
+  color: var(--color-dark);
+  padding: var(--size-300);
+}
+
+table caption {
+  color: var(--color-light);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--color-white);
+}
+
+th {
+  text-align: left;
+  width: 60%;
+  padding-inline: var(--size-300);
+}
+
+td {
+  text-align: center;
+  width: 40%;
+  padding-inline: var(--size-300);
+  ;
+}
